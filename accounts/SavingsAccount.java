@@ -3,7 +3,7 @@ package accounts;
 import java.math.BigDecimal;
 
 public class SavingsAccount extends Account {
-    final static BigDecimal INTEREST_RATE = new BigDecimal(0.6); 
+    final static BigDecimal INTEREST_RATE = new BigDecimal(0.3); 
 
     public SavingsAccount () {
 
