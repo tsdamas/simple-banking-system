@@ -6,17 +6,19 @@ public class Costumer {
     private String name; 
     private String address;
     private String phoneNumber; 
+    private String costumerId;
     private List<Account> accounts; 
 
-    public Costumer (String name, String address, String phoneNumber) {
+    public Costumer (String name, String address, String phoneNumber, String costumerId) {
         this.name = name;
         this.address = address; 
         this.phoneNumber = phoneNumber;
+        this.costumerId = costumerId; 
         this.accounts = new ArrayList<>(); 
     }
 
     public Costumer() {
-        this("John Smith", "0 Street, Kelowna, British Columbia, Canada", "000-000-0000"); 
+        this("John Smith", "0 Street, Kelowna, British Columbia, Canada", "000-000-0000", "C0000"); 
     }
 
     public String getName () {
