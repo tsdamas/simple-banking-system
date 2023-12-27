@@ -1,6 +1,8 @@
+import java.math.BigDecimal;
 import java.util.*;
 
 import accounts.Account;
+import accounts.CheckingAccount;
 
 public class Costumer {
     private String name; 
@@ -47,6 +49,12 @@ public class Costumer {
 
     public void addAccount(Account account) {
         accounts.add(account); 
+    }
+
+    public CheckingAccount createCheckingAccount(Integer accountNumber, BigDecimal initialBalance, BigDecimal minimumBalance) {
+        CheckingAccount checkingAccount = new CheckingAccount(accountNumber, this.costumerId, this.name, initialBalance, minimumBalance); 
+        accounts.add(checkingAccount);
+        return checkingAccount; 
     }
 
     public void printCostumerInfo() {
