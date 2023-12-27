@@ -1,8 +1,5 @@
-package simple
 
 import java.math.BigDecimal;
-
--banking-system;
 
 public class Account {
     private Integer accountNumber;
@@ -16,7 +13,7 @@ public class Account {
     }
 
     public Account () {
-        this(0, 0.0, "template"); 
+        this(0, BigDecimal.ZERO, "template"); 
     }
 
     public Integer getAccountNumber () {
@@ -52,8 +49,8 @@ public class Account {
 
     public BigDecimal withdraw (BigDecimal withdraw) {
         BigDecimal newBalance; 
-
         newBalance = this.balance.subtract(withdraw); 
+        return newBalance;
     }
 
 
